@@ -1,0 +1,36 @@
+[project]
+name = "transformers_for_sentiment_analysis"
+version = "0.1.0"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "datasets>=3.1.0",
+    "polars>=1.17.1",
+    "torch>=2.5.1",
+    "transformers>=4.47.0",
+]
+
+[[tool.uv.index]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true
+
+[tool.uv.sources]
+torch = [{ index = "pytorch-cpu", marker = "platform_system != 'Darwin'" }]
+
+[tool.ruff.lint]
+select = ["ALL"]
+ignore = [
+    # print is fine
+    "T201",
+    # conflicts with D211
+    "D203",
+    # conflicts with D213
+    "D213",
+    # documentation is hard
+    "D100",
+    "D103",
+    # can't be used with formatter
+    "COM812",
+    "ISC001",
+]
