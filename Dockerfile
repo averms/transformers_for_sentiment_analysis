@@ -26,6 +26,7 @@ FROM scratch
 COPY --from=builder /mnt/micro /
 WORKDIR /app
 COPY / /app
-# RUN uv sync
+RUN uv sync
 
 CMD ["uv", "run", "src/preprocess_imdb.py"]
+# CMD ["uv", "run", "src/traintest_emo.py"]
