@@ -25,12 +25,14 @@ ignore = [
     # documentation is hard
     "D100",
     "D103",
-    # noise
-    "TC002",
     # conflicts with D211
     "D203",
     # conflicts with D212
     "D213",
+    # unnecessary perf optimization
+    "TC002",
+    # commented-out code is fine
+    "ERA001",
     # can't be used with formatter
     "COM812",
     "ISC001",
