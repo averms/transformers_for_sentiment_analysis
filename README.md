@@ -1,7 +1,5 @@
 # Using Encoder-Only Transformers for Sentiment Analysis
 
-See [the paper](./writing/paper.pdf).
-
 ## Reproduce
 
 You can use the Dockerfile. Just build it with
